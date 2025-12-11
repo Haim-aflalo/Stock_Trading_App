@@ -3,7 +3,6 @@ import { stockMarket } from '../data/dataActions.js';
 
 export function searchStock(identifier) {
   let actionsFound = [];
-  identifier = input('Please enter the action ID or name: ');
   for (let i = 0; i < stockMarket.stocks.length; i++) {
     if (
       stockMarket.stocks[i].name === identifier ||
