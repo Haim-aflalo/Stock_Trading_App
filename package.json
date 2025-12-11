@@ -1,0 +1,21 @@
+{
+  "name": "stock_trading_app",
+  "version": "1.0.0",
+  "description": "\"# Stock_Treading_app\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Haim-aflalo/Stock_Treading_app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Haim-aflalo/Stock_Treading_app/issues"
+  },
+  "homepage": "https://github.com/Haim-aflalo/Stock_Treading_app#readme"
+}
