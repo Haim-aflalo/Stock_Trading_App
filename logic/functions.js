@@ -1,4 +1,11 @@
 import { stockMarket } from '../data/dataActions.js';
+import {
+  updateBuyPrice,
+  updateSellPrice,
+  checkStockAvailable,
+} from './utils.js';
+
+import input from 'analiza-sync';
 
 export function searchStock(identifier) {
   let actionsFound = [];
@@ -30,6 +37,24 @@ export function filterStocksByPrice(givenPrice, above) {
         }
       }
     }
+  } else {
+    return 'invalid format of price!! ';
   }
   return actionsFound;
+}
+
+export function OperateOnStock(operation, identifier) {
+  if (operation === 'buy') {
+    if (checkStockAvailable(identifier, quantity)) {
+      
+      updateBuyPrice(identifier, quantity);
+    }
+  }
+  if (operation === 'sell') {
+    let quantity = input('a ');
+    updateSellPrice(identifier, quantity);
+  }
+  if (operation !== 'buy' || operation !== 'sell') {
+    throw new Error('Invalid operation');
+  }
 }
